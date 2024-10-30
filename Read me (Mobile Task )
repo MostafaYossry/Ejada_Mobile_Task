@@ -1,0 +1,56 @@
+Hello I'm Mostafa Alsaddek 
+========================================
+To be able to run this app you need to 
+- Open Appium server GUI then start session at 0.0.0.0:4723
+- I use my Android mobile, so I connect it with USB cable and make USB debugging on from the developer settings
+- Please change the following based on your phone
+        cap.setCapability("appium:platformVersion", "14");
+        cap.setCapability("appium:deviceName", "RKY-LX2");
+        cap.setCapability("appium:udid", "A6NY9X3609G03187");
+- I use Sauce Labs to be able to inspect the application elements as Appium inspector is not working with me, also UiAutomationViewer is not available in latest Android Studio app.
+========================================
+In this project, I use Eclipse, Java, Cucumber, and JUnit runner.
+
+I make 2 scenarios
+1- Invalid Logins
+I implement 4 TCs like to show different messages per each case of inputs.
+
+2- Valid Login
+	- I Login to the home page
+	- I assert the valid login
+
+ProjectName(MobileAppTask)/
+│
+├── src/
+│   ├── main/
+│   │   ── java/
+│   │      └── actionsFiles/    <-- Contain configuration file
+│   │      └── sdFiles/         <-- Contains step definition file classes
+│   │   
+│   └── test/
+│       └── java/
+│           └── mobileFeatures/       <-- Contains cucumber feature files
+│           └── runner/         <-- Contains Junit runner file
+├── target/
+│   ├── cucumber-reports/       <-- Contains Report after running the Test 
+│
+├── pom.xml (for dependencies)
+└── README
+
+You can get the feature file in (src/test/java/mobileFeatures/SauceDemoMobile.feature)
+	
+As this is a Cucumber I create the step definition file in sdFiles package (src/main/java/sd) that contains the actions for each command in the feature file.
+
+I use a local report after each run in HTML, you can find the test report in (target\cucumber-reports\cucumber-html-report.html)
+========================================================================
+
+To run this application you need to import the project to Eclipse then Go to the Runner file (src/test/java/runner/RunnerMobileTest.java) then run as "JUnit Test"
+-------------------------------
+Note: I use Windows and Eclipse IDE for Java Developers Version: 2024-09 (4.33.0)
+
+-------------------------------
+-------------
+-------------
+Mostafa Alsaddek
++201027062028
+mos.yossry.cufe@gmail.com
